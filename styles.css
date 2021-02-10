@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  position: relative; /*Use position relative to apply flex*/
+  display: flex;
+  justify-content: center; /*justify-content(left/right)*/
+  align-items: flex-start; /*align-items(Up/Down) */
+  font-family: sans-serif;
+  height: 900px;
+  color: black;
+  background: linear-gradient(
+    to top left,
+    rgb(79, 168, 79),
+    rgb(164, 224, 164)
+  );
+}
+
+/*Show-modal button style rules*/
+.show-modal {
+  padding: 5px 10px;
+  height: 40px;
+  margin: 20px 20px;
+  width: 200px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.close-modal:hover {
+  text-shadow: 0px 0px 10px black;
+}
+.hidden {
+  display: none;
+}
+/*MODAL WINDOW POPUP STYLES*/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 70%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 0px 10px 50px rgb(68, 63, 63);
+}
